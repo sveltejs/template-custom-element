@@ -1,0 +1,28 @@
+<h1>Hello {{name}}!</h1>
+
+<Box>
+	<p>The button has been clicked {{count}} times</p>
+</Box>
+
+<Counter bind:count/>
+
+<style>
+	h1 {
+		color: purple;
+	}
+
+	p {
+		color: blue;
+	}
+</style>
+
+<script>
+	import Box from './Box.html';
+	import Counter from './Counter.html';
+
+	export default {
+		tag: 'my-app',
+
+		components: { Box, Counter }
+	};
+</script>

@@ -1,0 +1,35 @@
+<button on:click='set({ count: count + 1 })'>count: {{count}}</button>
+
+<style>
+	input, button, select, textarea {
+		font-family: inherit;
+		font-size: inherit;
+		padding: 0.4em;
+		margin: 0 0 0.5em 0;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		background-color: #f4f4f4;
+		outline: none;
+	}
+
+	button:active {
+		background-color: #ddd;
+	}
+
+	button:focus {
+		border-color: #666;
+	}
+</style>
+
+<script>
+	export default {
+		tag: 'my-counter',
+
+		data() {
+			return {
+				count: 0
+			};
+		}
+	};
+</script>

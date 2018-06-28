@@ -1,8 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import buble from 'rollup-plugin-buble';
-import uglify from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -19,10 +18,7 @@ export default {
 			// enable run-time checks when not in production
 			dev: !production,
 
-			customElement: true,
-
-			// this results in smaller CSS files
-			cascade: false
+			customElement: true
 		}),
 
 		// If you have external dependencies installed from
@@ -33,9 +29,6 @@ export default {
 		resolve(),
 		commonjs(),
 
-		// If we're building for production (npm run build
-		// instead of npm run dev), transpile and minify
-		production && buble({ exclude: 'node_modules/**' }),
-		production && uglify()
+		production && terser()
 	]
 };

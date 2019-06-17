@@ -1,3 +1,5 @@
+<svelte:options tag="my-box" />
+
 <p>This is a custom element with slotted shadow DOM content</p>
 <slot></slot>
 
@@ -15,9 +17,3 @@
 		color: blue;
 	}
 </style>
-
-<script>
-	export default {
-		tag: 'my-box'
-	};
-</script>

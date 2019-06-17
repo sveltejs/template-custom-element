@@ -1,12 +1,18 @@
+<svelte:options tag="my-app" />
+
 <h1>Hello {name}!</h1>
 
 <p>Try 'inspect element' — the <code>Box</code> and <code>Counter</code> components have been converted to custom elements with shadow DOM and scoped styles.</p>
 
-<Box>
+<my-box>
 	<p>The button has been clicked {count} times</p>
-</Box>
+	<my-counter {count} on:click={() => count++}></my-counter>
+</my-box>
 
-<Counter bind:count/>
+<my-box>
+	Uncontrolled counter:<br>
+	<my-counter></my-counter>
+</my-box>
 
 <style>
 	h1 {
@@ -23,12 +29,9 @@
 </style>
 
 <script>
-	import Box from './Box.html';
-	import Counter from './Counter.html';
+	import './box.svelte';
+	import './counter.svelte';
 
-	export default {
-		tag: 'my-app',
-
-		components: { Box, Counter }
-	};
+	let count = 0
+	export let name
 </script>

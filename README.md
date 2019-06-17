@@ -1,6 +1,6 @@
 # svelte app
 
-This is a project template for [Svelte](https://svelte.technology) apps. It lives at https://github.com/sveltejs/template-custom-element.
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-custom-element.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 

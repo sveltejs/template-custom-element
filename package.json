@@ -9,7 +9,7 @@
     "rollup-plugin-svelte": "^4.0.0",
     "rollup-plugin-terser": "^1.0.1",
     "rollup-plugin-uglify": "^4.0.0",
-    "serve": "^9.1.0",
+    "serve": "^11.3.2",
     "svelte": "^2.8.1"
   },
   "scripts": {
